@@ -5,21 +5,21 @@
 class Orderer < Formula
   desc "orderer is a CLI for importing orders into shopify."
   homepage "https://github.com/juliaogris/orderer"
-  version "0.0.5"
+  version "0.0.6"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/juliaogris/orderer/releases/download/v0.0.5/orderer_0.0.5_darwin_amd64.tar.gz"
-      sha256 "d4486ec8a50ba203857503e77b297e9f24e717a1717c31a58d9778c04fa16413"
+    if Hardware::CPU.arm?
+      url "https://github.com/juliaogris/orderer/releases/download/v0.0.6/orderer_0.0.6_darwin_arm64.tar.gz"
+      sha256 "268f9281d6f78fc0d745fa5401785cdda668d14ac8cf7c6d157d47ae78563296"
 
       def install
         bin.install "orderer"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/juliaogris/orderer/releases/download/v0.0.5/orderer_0.0.5_darwin_arm64.tar.gz"
-      sha256 "1c32606e66299cf2b31d6ef30740d9f26e9aae9a398fe02cd8b7d29ec3426982"
+    if Hardware::CPU.intel?
+      url "https://github.com/juliaogris/orderer/releases/download/v0.0.6/orderer_0.0.6_darwin_amd64.tar.gz"
+      sha256 "ab5e7c27f08884552e6af41619498aa7b34550ac70dd4d647c6df944a5d45ba8"
 
       def install
         bin.install "orderer"
@@ -28,17 +28,17 @@ class Orderer < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/juliaogris/orderer/releases/download/v0.0.5/orderer_0.0.5_linux_amd64.tar.gz"
-      sha256 "c74fb7cc8628c6308d209bd580a762588f21b1a6e115ed53fe9c5dd770a849cb"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/juliaogris/orderer/releases/download/v0.0.6/orderer_0.0.6_linux_arm64.tar.gz"
+      sha256 "8ebd8f1b88bd18d533ea1eaa2802825081fce61802a658a1fcf49922fcb84bc4"
 
       def install
         bin.install "orderer"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/juliaogris/orderer/releases/download/v0.0.5/orderer_0.0.5_linux_arm64.tar.gz"
-      sha256 "d0b1c61b2d9e2b5c51b943bbe3e3b48a3181e6c9803b63d363318c3444a4c047"
+    if Hardware::CPU.intel?
+      url "https://github.com/juliaogris/orderer/releases/download/v0.0.6/orderer_0.0.6_linux_amd64.tar.gz"
+      sha256 "abbb76294c0d82865e140ff589786f649c1b077cad42b56763e0b7f08368920b"
 
       def install
         bin.install "orderer"
