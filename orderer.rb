@@ -5,21 +5,21 @@
 class Orderer < Formula
   desc "orderer is a CLI for importing orders into shopify."
   homepage "https://github.com/juliaogris/orderer"
-  version "0.0.6"
+  version "0.0.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/juliaogris/orderer/releases/download/v0.0.6/orderer_0.0.6_darwin_arm64.tar.gz"
-      sha256 "268f9281d6f78fc0d745fa5401785cdda668d14ac8cf7c6d157d47ae78563296"
+      url "https://github.com/juliaogris/orderer/releases/download/v0.0.7/orderer_0.0.7_darwin_arm64.tar.gz"
+      sha256 "1263b254886b7e9eba5c24364d3b748e49b153b9369375e2d5474aefd7f46f97"
 
       def install
         bin.install "orderer"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/juliaogris/orderer/releases/download/v0.0.6/orderer_0.0.6_darwin_amd64.tar.gz"
-      sha256 "ab5e7c27f08884552e6af41619498aa7b34550ac70dd4d647c6df944a5d45ba8"
+      url "https://github.com/juliaogris/orderer/releases/download/v0.0.7/orderer_0.0.7_darwin_amd64.tar.gz"
+      sha256 "b6bab57671aea1858dce7fbf6afd5b482825982a825c5b503b1cbe39def27c92"
 
       def install
         bin.install "orderer"
@@ -29,16 +29,16 @@ class Orderer < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/juliaogris/orderer/releases/download/v0.0.6/orderer_0.0.6_linux_arm64.tar.gz"
-      sha256 "8ebd8f1b88bd18d533ea1eaa2802825081fce61802a658a1fcf49922fcb84bc4"
+      url "https://github.com/juliaogris/orderer/releases/download/v0.0.7/orderer_0.0.7_linux_arm64.tar.gz"
+      sha256 "04246283931ef3252a29ee9024af475b0d1d28ad1b6a9f61393b8520f03add40"
 
       def install
         bin.install "orderer"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/juliaogris/orderer/releases/download/v0.0.6/orderer_0.0.6_linux_amd64.tar.gz"
-      sha256 "abbb76294c0d82865e140ff589786f649c1b077cad42b56763e0b7f08368920b"
+      url "https://github.com/juliaogris/orderer/releases/download/v0.0.7/orderer_0.0.7_linux_amd64.tar.gz"
+      sha256 "df2ce5457f86c103aca44656f551d78b5bd1ffb517211762a3df43dbd81e4e95"
 
       def install
         bin.install "orderer"
